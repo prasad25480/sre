@@ -1,0 +1,15 @@
+apiVersion: networking.gke.io/v1
+kind: MultiClusterService
+metadata:
+  name: zone-mcs
+  namespace: gke-connect
+spec:
+  template:
+    spec:
+      selector:
+        app: hello
+      ports:
+      - name: web
+        protocol: TCP
+        port: 8080
+        targetPort: 80

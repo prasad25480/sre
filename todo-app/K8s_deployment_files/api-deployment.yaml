@@ -1,0 +1,29 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: gke-connect
+spec:
+  selector:
+    matchLabels:
+      app: hello
+      tier: backend
+      track: stable
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: hello
+        tier: backend
+        track: stable
+    spec:
+      containers:
+        - name: hello
+          image: gcr.io/sre-bootcamp-328203/todoapp-api
+          ports:
+            - name: http
+              containerPort: 5000
+          resources:
+            requests:
+              cpu: "100m"

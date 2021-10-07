@@ -1,0 +1,230 @@
+<html>
+
+
+<head>
+    <title>SRE-BOOTCAMP-APPLICATION</title>
+    <h1>SRE-BOOTCAMP-APPLICATION(US Location)</h1>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="methods.js"></script>
+</head>
+
+<style>
+    #status {
+        width: 200px;
+        height: 30px;
+    }
+
+    #heading1 {
+        text-align: left;
+    }
+
+    #status1 {
+        width: 200px;
+        height: 30px;
+    }
+
+    .update {
+
+
+        text-align: center;
+        padding: 10px;
+        border: 3px dashed;
+        display: none;
+
+
+    }
+
+    .update1 {
+
+
+        text-align: center;
+        padding: 10px;
+        border: 3px dashed;
+        display: none;
+
+
+    }
+
+    .heading {
+
+        margin: 20px;
+        margin-top: 40px;
+        text-align: center;
+        font-size: 40px;
+        font-family: cursive;
+
+    }
+
+    .popup {
+
+        display: relative;
+        left: 200px;
+    }
+
+    #noelements {
+
+        text-align: center;
+        position: relative;
+        top: 30px;
+        font-size: 50px;
+        font-weight: bold;
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+
+    .button {
+
+        border-style: double;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 10px;
+        background-color: orange;
+        height: 50px;
+        width: 100px;
+
+    }
+
+
+    .newdata {
+
+        text-align: center;
+
+        font-size: 70px;
+    }
+
+    .border {
+
+        border-top: 2px solid;
+        margin: 4px;
+
+    }
+</style>
+
+<body>
+
+    <div class="heading">
+
+        SRE-BOOTCAMP-APPLICATION
+    </div>
+
+    <br><br>
+    <divc class="popup">
+        <input type="button" class="btn btn-success" onclick="createpoptask()" value="CREATE TASK">
+        </div>
+        <br>
+        <br>
+        <div class="update" id="update">
+            <h3 id="heading1"><b>UPDATE UR TASK:</b></h3>
+            <form action="">
+                <label><b>Name of the task:</b></label>
+                <input type="text" id="name" required>
+                <br>
+                <br>
+                <label><b>Status of the task:</b></label>
+
+                <select id="status">
+                    <option value="DONE">DONE</option>
+                    <option value="PENDING" selected="selected">PENDING</option>
+
+                </select>
+
+                <br>
+                <br>
+                <label><b>Expiry Date:</b></label>
+                <input type="datetime-local" id="datetime">
+                <br><br>
+
+                <input type="button" class="btn btn-success" onclick="updatetask()" value="UPDATE">
+                <input type="button" class="btn btn-danger" onclick="canceltask()" value="CANCEL">
+
+
+
+
+            </form>
+
+        </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+        <br><br><br>
+        <div class="table1">
+            <table class="table  table-hover">
+                <thead id="append">
+                    <tr>
+                        <th>TaskName</th>
+                        <th>Expiry Date</th>
+                        <th>Status</th>
+                        <th>UPDATE</th>
+                        <th>Delete The Record</th>
+                    </tr>
+                </thead>
+
+                <tbody id="mytable">
+
+                </tbody>
+            </table>
+        </div>
+        <div id="noelements">
+
+
+        </div>
+
+
+        <br><br><br>
+
+        <div class="update1" id="update1">
+            <h3 id="heading1"><b>CREATE UR TASK:</b></h3>
+            <form action="">
+                <label><b>Name of the task:</b></label>
+                <input type="text" id="name1" required>
+                <br>
+                <br>
+                <label><b>Status of the task:</b></label>
+
+                <select id="status1">
+                    <option value="DONE">DONE</option>
+                    <option value="PENDING" selected="selected">PENDING</option>
+
+                </select>
+
+                <br>
+                <br>
+                <label><b>Expiry Date:</b></label>
+                <input type="datetime-local" id="datetime1">
+                <br><br>
+
+                <input type="button" class="btn btn-success" onclick="createtask()" value="CREATE">
+                <input type="button" class="btn btn-danger" onclick="cancelpopup()" value="CANCEL">
+
+
+
+
+            </form>
+
+        </div>
+
+
+
+
+
+</body>
+
+
+
+
+
+</html>
